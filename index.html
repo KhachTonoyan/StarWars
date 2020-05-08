@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*{
+			margin:0;
+			padding:0;		
+		}
+		body{
+			background-color:black
+		}
+		#board{
+			width:80%;
+			height: 100vh;
+			background-color:#50BFFF;
+			position:relative;
+			margin: auto
+		}
+		#me{
+			width:90px;
+			height:98px;
+			background-image:url(m.png);
+			background-repeat:no-repeat;
+			background-size:contain;
+			background-position:center;
+			z-index:3;
+			position:absolute;
+			left:0;
+			right:0;
+			bottom:0;
+			margin:auto;
+		}
+		.fire{
+			position:absolute;
+			width:10px;
+			height:10px;
+			border-radius:50%;
+			background-color:black;
+		}
+		.dushman{
+			width:80px;
+			height:90px;
+			background-image:url(h.png);
+			background-repeat:no-repeat;
+			background-size:contain;
+			background-position:center;
+			z-index:2;
+			position:absolute;
+		}
+		#gameOver{
+			z-index:3;
+			width:100%;
+			font-size:50;
+			position:absolute;
+			left:0;
+			right:0;
+			bottom:0;
+			top:0;
+			margin:auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#gameOver>span{
+			letter-spacing:20px;
+			font-family:sans-serif;
+			opacity:0;
+		}
+		#ddd{
+			width: 100%;
+			height: 100vh;
+		}
+		#miavor{
+			width:80px;
+			height:40px;
+			z-index:1;
+			position:absolute;
+			right:0;
+			bottom:0;
+			margin:auto;
+			font-size:20px;
+
+		}
+		#sahman{
+			width:100%:;
+			height:0px;
+			border:2px solid red;
+			z-index:1;
+			position:absolute;
+			right:0;
+			left:0;
+			bottom:113px;
+			margin:auto;
+			font-size:20px;
+		}
+		#start{
+			z-index:4;
+			width:100px;
+			height:70px;
+			font-size:50;
+			position:absolute;
+			left:20px;
+			top:20px;
+			margin:auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color:#A4C9D1;
+			font-size:25px;
+			padding:15px;
+			letter-spacing:3px;
+			font-family:serif;
+			opacity:1;
+		}
+		#center{width:1px;
+			height:1px;
+			z-index:10;
+			position:absolute;
+			top:0;
+			left:0;
+			right:0;
+			margin:auto;
+
+		}
+	</style>
+</head>
+<body>
+<div id="board">
+	<div id="ddd"></div>
+	<div><button id="start">Start</button></div>	
+	<div id="gameOver"><span class="gameOver">Game Over</span></div>	
+	<div id="me"><div id="center"></div></div>
+	<div id="miavor">0 Score</div>
+	<div id="sahman"></div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</html>
